@@ -59,8 +59,8 @@ By the end of the course you will be able to:
 | 2 | Data manipulation libraries (pandas, NumPy) | |
 | 3 | Data sources and retrieval: formats, web scraping, APIs | |
 | 4 | Data integration: merging CSV and JSON | |
-| 5 | **Data quality and outliers** | [📂 Week 5](lectures/week05_outliers/) |
-| 6 | **Data transformation and feature engineering** | [📂 Week 6](lectures/week06_reshaping_features/) |
+| 5 | **Data quality and outliers** | [📂 Lecture](lectures/week05_outliers/) · [📝 Homework](homework/week05_outliers/) |
+| 6 | **Data transformation and feature engineering** | [📂 Lecture](lectures/week06_reshaping_features/) |
 | 7 | Introduction to SQL | |
 | 8 | Advanced SQL: joins, subqueries | |
 | 9 | Data quality profiling and assessment | |
@@ -71,7 +71,7 @@ By the end of the course you will be able to:
 | 14 | Advanced data wrangling: nested JSON, performance | |
 | 15 | Final projects and presentations | |
 
-**Labs:** [📂 Lab 4 · Regular Expressions](labs/lab04_regex/)
+**Homework:** [📝 All assignments](homework/) · **Labs:** [🧪 Lab 4 · Regular Expressions](labs/lab04_regex/)
 
 Materials are added as the semester goes on. Each folder has its own README listing its files.
 
@@ -95,13 +95,18 @@ fall_26_data_wrang/
 │       ├── README.md
 │       ├── week06_reshaping_slides.pdf
 │       └── week06_flights_wide_long.ipynb
+├── homework/
+│   ├── README.md                      ← all assignments and due dates
+│   └── week05_outliers/
+│       ├── README.md
+│       └── week05_outliers_homework.pdf
 └── labs/
     └── lab04_regex/
         ├── README.md
         └── lab04_regex_directions.pdf
 ```
 
-**Naming convention:** `weekNN_topic_type` for lecture files and `labNN_topic` for labs, so files stay sorted and are recognizable after download.
+**Naming convention:** `weekNN_topic_type` for lecture and homework files and `labNN_topic` for labs, so files stay sorted and are recognizable after download.
 
 ---
 
