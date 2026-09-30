@@ -1,34 +1,53 @@
 # MATH 153 · Data Wrangling and Data Engineering
 
 **Howard University · Department of Mathematics · Fall 2026**
-Instructor: Moussa Doumbia, Ph.D.
+Instructor: Moussa Doumbia, Ph.D. · 3 credit hours · CRN 83974
 
-Course materials for MATH 153: lecture slides, lecture notes, companion Jupyter notebooks, and lab directions. Real data rarely arrives ready to analyze. This course teaches you to get it there: to find and fix what is wrong, and to reshape and transform it so your question can be answered, in code you can re-run.
+| | |
+|---|---|
+| **Meets** | Monday, Wednesday, Friday · 2:00–3:30 pm · Locke Hall, Room 208 |
+| **Office hours** | Monday, Wednesday, Friday · 1:00–2:00 pm |
+| **Prerequisites** | MATH 014 (Introduction to Data Science) and CSCI 135 |
+| **Full syllabus** | On Canvas (contact information, policies, university services) |
 
 ---
 
-## Contents
+## About the course
 
-### Outliers, Inconsistencies, and Data Quality
+Real data rarely arrives ready to analyze. This course is a comprehensive introduction to data wrangling and data engineering: how to **collect, clean, transform, and prepare** data for analysis and machine learning. It covers data formats, integration, quality assessment, and building data pipelines, with an emphasis on practical work in **Python, SQL, and data engineering frameworks**.
 
-| File | What it is |
-|---|---|
-| [`outliers_beamer.pdf`](outliers_beamer.pdf) | Lecture slides |
-| [`outliers_beamer_notes.pdf`](outliers_beamer_notes.pdf) | The same slides with instructor notes |
-| [`outliers_simple_notes_1.pdf`](outliers_simple_notes_1.pdf) | Lecture notes with practice problems, solutions, and glossary |
-| [`outliers_simple_notes_1.ipynb`](outliers_simple_notes_1.ipynb) | Runnable version of the lecture notes |
-| [`outliers_data_wrangling.ipynb`](outliers_data_wrangling.ipynb) | Companion notebook: three worked cases (the Bison Half-Marathon, the \$1 Apartment, the Ice Cream Truck) |
+### By the end of the course you will be able to
 
-**Topics:** kinds of outliers (error, contamination, genuine extreme) · z-score, IQR rule, modified z-score · masking and breakdown point · right-skewed data and log scales · multivariate outliers · the four kinds of inconsistency (representation, units, format, contradiction) · handling flagged values · measuring data quality.
+- Collect data from files, web pages, and APIs, and combine data from multiple sources.
+- Clean data: detect and handle outliers, fix inconsistencies, and measure data quality.
+- Reshape and transform data, and engineer features for analysis and machine learning.
+- Query and transform relational data with SQL, from basic queries to joins and subqueries.
+- Validate and test data, and build data pipelines with Python, SQL, and frameworks such as Airflow.
+- Work with large-scale and complex data (Spark, nested JSON).
 
-### Reshaping, Feature Engineering, and Transformations
+---
 
-| File | What it is |
-|---|---|
-| [`Reshaping_5.pdf`](Reshaping_5.pdf) | Lecture slides |
-| [`FILIGTHS.ipynb`](FILIGTHS.ipynb) | Wide vs. long with seaborn's `flights` dataset (`pivot`, `pivot_table`) |
+## Weekly schedule
 
-**Topics:** wide vs. long (tidy) data · `pivot`, `pivot_table`, `melt` · building new features · scaling and log transformations.
+| Week | Topic | In class | Materials in this repo |
+|---|---|---|---|
+| 1 | Introduction to data wrangling and data engineering | Examples of messy data | |
+| 2 | Data manipulation libraries (pandas, NumPy) | Hands-on pandas for data cleaning | |
+| 3 | Data sources and retrieval (formats, web scraping, APIs) | Retrieve and parse data from an API | |
+| 4 | Data integration | Merge CSV and JSON datasets | |
+| 5 | **Data quality and outliers** | Detect and handle outliers | [Slides](outliers_beamer.pdf) · [Slides with notes](outliers_beamer_notes.pdf) · [Lecture notes](outliers_simple_notes_1.pdf) ([notebook](outliers_simple_notes_1.ipynb)) · [Companion notebook](outliers_data_wrangling.ipynb) |
+| 6 | **Data transformation and feature engineering** | Create new features from existing data | [Slides](Reshaping_5.pdf) · [Flights notebook](FILIGTHS.ipynb) |
+| 7 | Introduction to SQL | Simple queries on sample databases | |
+| 8 | Advanced SQL (joins, subqueries) | Joins and nested subqueries | |
+| 9 | Data quality profiling and assessment | Profile a dataset's quality | |
+| 10 | Data validation and testing | Build validation checks for incoming data | |
+| 11 | Introduction to data pipelines (ETL) | Build a basic pipeline in Python or SQL | |
+| 12 | Data engineering frameworks (Airflow, Luigi) | Design a pipeline with a framework | |
+| 13 | Big data processing (Hadoop, Spark) | Process a large dataset with Spark | |
+| 14 | Advanced data wrangling | Nested JSON; performance optimization | |
+| 15 | Final projects and presentations | Present final projects | |
+
+Materials are added as the semester goes on.
 
 ### Labs
 
@@ -38,13 +57,36 @@ Course materials for MATH 153: lecture slides, lecture notes, companion Jupyter 
 
 ---
 
+## Grading
+
+| Component | Weight |
+|---|---|
+| Class participation | 5% |
+| Assessments | 40% |
+| Group project | 30% |
+| Final individual project | 25% |
+
+| A | B | C | D | F |
+|---|---|---|---|---|
+| 90–100% | 80–89% | 70–79% | 60–69% | below 60% |
+
+- Every activity is graded 0–100. **Work not submitted receives 0.**
+- **Late work is not accepted.**
+- To receive credit for the course, you need a **C or higher** on the weighted average.
+
+---
+
+## Textbooks
+
+- Wes McKinney, *Python for Data Analysis* (O'Reilly). Free online edition: [wesmckinney.com/book](https://wesmckinney.com/book/)
+- *Data Wrangling with Python* (online resource)
+- Additional readings are posted on Canvas.
+
+---
+
 ## Getting started
 
-You need Python 3.10 or newer and Jupyter. The notebooks use:
-
-```
-numpy  pandas  matplotlib  seaborn
-```
+You need Python 3.10 or newer and Jupyter. The notebooks use `numpy`, `pandas`, `matplotlib`, and `seaborn`.
 
 **Option 1: Anaconda (recommended).** Install [Anaconda](https://www.anaconda.com/download); everything above is included.
 
@@ -74,15 +116,17 @@ To pick up new materials later, run `git pull` inside the folder.
 
 ## Submitting work
 
-Unless a lab or homework says otherwise:
+Unless a lab or assignment says otherwise:
 
 - Submit **`lastname_labXX.ipynb`**, run top to bottom with no errors, **plus a PDF export**.
 - Upload to **Canvas** by the posted deadline.
-- Discuss ideas with classmates, but write your own code and answers.
+- Discuss ideas with classmates, but write your own code and answers. The Howard University Academic Code of Conduct applies.
 
 ---
 
-## Questions
+## Questions and support
 
-Post on the Canvas discussion board or come to office hours. If you find a mistake in these materials, please open an [issue](https://github.com/mdoumbia1/fall_26_data_wrang/issues).
-
+- **Course questions:** post on the Canvas discussion board, or come to office hours.
+- **Accommodations:** register with the Office of Student Services (oss.disabilityservices@howard.edu). Accommodations must be requested each semester.
+- **Technical help:** ETS Help Desk, 202-806-2020, huhelpdesk@howard.edu.
+- **Found a mistake in these materials?** Open an [issue](https://github.com/mdoumbia1/fall_26_data_wrang/issues).
