@@ -1,0 +1,7 @@
+# MATH 153 — Data Wrangling and Data Engineering
+# Install with:  pip install -r requirements.txt
+numpy
+pandas
+matplotlib
+seaborn
+jupyter
